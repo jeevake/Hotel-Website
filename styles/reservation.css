@@ -1,0 +1,160 @@
+/*CSS Code For the Assignment 2*/
+
+
+.container-fluid{
+	padding:0;
+	background-image: url('../images/hotel_blur.jpg');
+	background-attachment:fixed;
+}
+
+
+/*---- ROW 1 ----*/
+
+#row_1{
+	width:100%;
+	margin:1.5% 0% 1% 0%;
+	position:relative;
+}
+
+#row_1 h3{
+	font-size:25px;
+	font-family:"Times New Roman";
+	font-weight:bold;
+	letter-Spacing:1px;
+	width:20%;
+	padding:1% 0% 1% 5%;
+	color:#ffffff;
+	background-color:rgba(0, 0, 0, .4);
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-name: title;
+}
+
+@keyframes title {
+  0%   {
+	  opacity:0;
+	  padding:1% 0% 1% 1%;
+	  }
+  100% {
+	  opacity:1;
+	  padding:1% 0% 1% 5%;
+	}
+}
+
+/*---- ROW 2 ----*/
+
+#row_2{
+	float:left;
+	position:relative;
+	width:100%;
+	background-color:#213269;
+}
+
+
+/*---- ROW 2 - Col - 1  ----*/
+
+#col_1{
+	float:left;
+	width:96%;
+	margin:2% 2% 2% 2%;
+	background-color:#ffffff;
+}
+
+#col_1 h4{
+	margin:2% 0 0 1%;
+	font-weight:bold;
+	color:#0000ff;	
+}
+
+#col_1 form{
+	margin:2% 0 0 0;	
+}
+
+#form_col_1,#form_col_2,#form_col_3{
+	float:left;
+}
+
+#form_col_3{
+	padding-bottom:2%;
+}
+/*---- ROW 2  col - 2 ----*/
+
+#col_2{
+	float:left;
+	width:96%;
+	margin:2% 2% 2% 2%;
+	background-color:#ffffff;
+}
+
+#col_2 h4{
+	margin:2% 0 0 1%;	
+	font-weight:bold;	
+		color:#0000ff;
+}
+
+#col_2 table,#col_2 th,#col_2 td{
+	border:2px solid #000;
+}
+
+#col_2 th{
+	background-color:#dedcdc;
+	color:#000;
+	
+}
+
+#col_2 marquee{
+	color:#000;
+	font-weight:bold;
+	font-size:23px;
+	padding:0 0 10% 0;
+	color:#ff0000;
+}
+
+
+/* ---- Small Screen ---- */
+@media only screen and (max-width: 768px) {
+	
+#row_1{
+	padding-top:10%;
+}
+
+@keyframes title {
+  0%   {
+	  opacity:0;
+	  padding: 1% 40% 1% 1%;
+	  }
+  100% {
+	  opacity:1;
+	  padding: 1% 40% 1% 5%;
+	}
+}
+
+#row_1 h3{
+	font-size:15px;
+	width:30%;
+	margin-top: 15%;
+    padding: 1% 40% 1% 5%;
+}
+
+#book_now{
+	margin-bottom:5%;
+	margin-left:30%;
+}
+
+#details{
+	margin-left:14%;
+	margin-bottom:2%;
+}
+
+table{
+	font-size:9px;
+}
+
+#col_2_1,#col_2_2,#col_2_3{
+	padding:0;
+}
+#col_2 marquee{
+	font-size:18px;
+}
+
+}

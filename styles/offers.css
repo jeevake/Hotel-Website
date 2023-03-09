@@ -1,0 +1,132 @@
+/*CSS Code For the Assignment 2*/
+
+
+.container-fluid{
+	padding:0;
+	background-image: url('../images/hotel_blur.jpg');
+	background-attachment:fixed;
+}
+
+
+/*---- ROW 1 ----*/
+
+#row_1{
+	width:100%;
+	margin:1.5% 0% 1% 0%;
+	position:relative;
+}
+
+#row_1 h3{
+	font-size:25px;
+	font-family:"Times New Roman";
+	font-weight:bold;
+	letter-Spacing:1px;
+	width:13%;
+	padding:1% 0% 1% 4%;
+	color:#ffffff;
+	background-color:rgba(0, 0, 0, .4);
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-name: title;
+}
+
+@keyframes title {
+  0%   {
+	  opacity:0;
+	  padding:1% 0% 1% 1%;
+	  }
+  100% {
+	  opacity:1;
+	  padding:1% 0% 1% 4%;
+	}
+}
+/*---- ROW 2 ----*/
+
+#row_2{
+	float:left;
+	position:relative;
+	width:100%;
+	background-color:#213269;
+}
+
+
+/*---- ROW 2 - Col - 1  ----*/
+
+#col_1{
+	float:left;
+	width:100%;
+	margin:2% 3% 2% 5%;
+	background-color:#ffffff;
+}
+
+#col_1 h4{
+	margin:2% 0 0 1%;	
+}
+
+#col_1 img{
+	width:100%;
+	padding:3%;
+}
+
+#col_1 p{
+	width:100%;
+	padding:0 3% 0;
+	text-align:justify;
+}
+
+#col_1_ul{
+	width:100%;
+	padding:0 10% 0;
+}
+
+	
+/*---- ROW 2  col - 2 ----*/
+
+#col_2{
+	float:left;
+	width:100%;
+	margin:2% 5% 2% 3%;
+	background-color:#ffffff;
+}
+
+#col_2 h4{
+	margin:2% 0 0 1%;	
+}
+
+#col_2 img{
+	width:100%;
+	padding:3%;
+}
+
+#col_2 p{
+	width:100%;
+	padding:0 3% 0;
+	text-align:justify;
+}
+
+#col_2_ol{
+	width:100%;
+	padding:0 10% 0;
+}
+
+/* ---- Small Screen ---- */
+@media only screen and (max-width: 768px) {
+	
+#row_1{
+	padding-top:10%;
+}
+
+#row_1 h3{
+	font-size:15px;
+	width:30%;
+	margin-top: 15%;
+    padding: 1% 25% 1% 5%;
+}
+
+#col_1,#col_2{
+	float:left;
+	width:92%;
+	margin:2% 3% 2% 5%;
+}
+
+}

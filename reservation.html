@@ -1,0 +1,354 @@
+<html>
+	<head>
+		<title>Reservation</title>
+		<link rel="shortcut icon" href="images/icon.png">
+		
+	<!-- Link Bootstrap -->
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		
+	<!-- End Link Bootstrap -->
+			
+		<script src="javascript/reservation.js"></script>
+		<link rel="stylesheet" href="styles/header_footer.css" type="text/css">
+		<link rel="stylesheet" href="styles/reservation.css" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+		
+	</head>
+	<body>
+	<div class="container-fluid">
+
+	<div id="header" style="line-height:120%">
+		<img src="images/logo.png"/>
+		<div id="nav">
+			<a id="home" href="index.html">HOME</a>
+			<a id="fac" href="facilities.html">FACILITIES</a>
+			<a id="acc" href="accomandation.html">ACCOMODATION</a>
+			<a id="res" href="reservation.html">RESERVATION</a>
+			<a id="off" href="offers.html">OFFERS</a>
+			<a id="con" href="contacts.html">CONTACT</a>
+		</div>
+	</div>
+		<div id="wrapper">
+	<!-- ROW 1 Section -->
+
+		<div id="row_1" class="col-md-12" style="padding:0";>
+			<h3>RESERVATION</h3>
+		</div>
+
+	
+	<!-- ROW 2 Section -->
+	<div id="row_2">
+		<div id="col_1" class="col-md-6">		
+			<h4>Reservation Data</h4>
+			
+			<!-- Start Form -->
+			
+				<form method="get">
+					
+					<div id="form_col_1" class="col-md-6">
+						<div class="form-group">
+							<label>First Name:</label>
+							<input type="text" class="form-control" id="f_name" placeholder="Enter First Name" required></br>
+							<label>Email address:</label>
+							<input type="email" class="form-control" placeholder="Enter email" id="email"></br>
+							<label>Country:</label>
+							<input type="text" class="form-control" id="country" placeholder="Enter Country" required ></br>
+							
+							<label>Arrival Date:</label>
+							 <input class="form-control" type="date"  id="arrival" required>
+							</br>
+							
+							<label>Rooms Type:</label></br>
+								<label><input type="radio" name="rm_type" value="classic" onclick="roomType = this.value" required> Classic Room</label><br>
+								<label><input type="radio" name="rm_type" value="deluxe" onclick="roomType = this.value"> Deluxe Room</label><br>
+								<label><input type="radio" name="rm_type" value="presedential" onclick="roomType = this.value"> Presidential Room</label><br></br>
+					
+							<label>No of Guests:</label>
+							<select class="form-control" id="no_of_guests">
+								<option select="selected" required>Please Select...</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select></br>
+							
+						</div>
+					</div>
+						
+					<div id="form_col_2" class="col-md-6">
+						<div class="form-group">
+							<label>Last Name:</label>
+							<input type="text" class="form-control" id="l_name" placeholder="Enter Last Name"></br>
+							<label>Phone Number:</label>
+							<input type="text" class="form-control" id="phone" placeholder="Enter Phone Number" required> </br>
+							
+							<label>No of Rooms:</label>
+							<select class="form-control" id="no_of_rooms">
+								<option select="selected" required>Please Select...</option>
+								<option value="1">1</option>
+								<option Value="2">2</option>
+								<option Value="3">3</option>
+								<option Value="4">4</option>
+							</select></br>
+							
+							<label>Departure Date:</label>
+							<input class="form-control" type="date"  id="departure" required></br>
+							
+							<label>Additional Info:</label></br>
+								<label><input type="radio" name="Ad_info" value="per_night" onclick="add_info = this.value" required> Per Night</label><br>
+								<label><input type="radio" name="Ad_info" value="breakfast" onclick="add_info = this.value"> With Breakfast</label><br>
+								<label><input type="radio" name="Ad_info" value="halfBoard" onclick="add_info = this.value"> Half Board</label><br>
+								<label><input type="radio" name="Ad_info" value="fullBoard" onclick="add_info = this.value"> Full Board</label><br></br>
+																		
+						</div>						
+					</div>
+						
+					<div id="form_col_3" class="col-md-12">
+						<label>Special Requirements:</label>
+						<textarea class="form-control" rows="5" id="comment"></textarea><br>
+						 <button  type="submit"  class="btn btn-primary">Book Now</button>
+						
+						 <button type="button" id="details" class="btn btn-success"  data-toggle="modal" data-target="#myModal" onclick="main()">Click here to confirm your reservation details</button>
+						 
+						  <!-- Modal -->
+						  <div class="modal fade" id="myModal" role="dialog">
+							<div class="modal-dialog">
+							
+							  <!-- Modal content-->
+							  <div class="modal-content">
+								<div class="modal-header">
+								<h4 class="modal-title">Reservation Details</h4>
+								  <button type="button" class="close" data-dismiss="modal">&times;</button>			  
+								</div>
+								
+								<div class="modal-body">
+								  <p id="res_name"></p>
+								  <p id="res_country"></p>
+								  <p id="res_email"></p>
+								  <p id="res_phone"></p>
+								  <p id="res_noguest"></p>
+								  <p id="res_days"></p>
+								  <p id="res_roomtype"></p>
+								  <p id="res_norooms"></p>
+								  <p id="res_addinfo"></p>
+								  <p id="res_total"></p>
+								</div>
+								
+								<div class="modal-footer">
+								  <button type="button" class="btn btn-warning" data-dismiss="modal">Confirm</button>
+								</div>
+							  </div>
+							  
+							</div>
+						  </div>
+						  
+						   <!-- End Modal -->
+					</div>
+					
+				</form>
+				
+			<!-- END Form -->
+			
+			</div>
+
+		<div id="col_2" class="col-md-5">
+			<h4>Prices</h4></br>
+			<div id="col_2_1" class="col-md-12">
+				<h5>Classic Rooms</h5>
+					 <table class="table table-bordered" >
+					<thead>
+						<tr>
+							<th>Rooms</th>
+							<th>P/Night</th>
+							<th>With B/F</th>
+							<th>H/Board</th>
+							<th>F/Board</th>
+						</tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td>Single</td>
+						<td>$30</td>
+						<td>$40</td>
+						<td>$60</td>
+						<td>$90</td>
+					  </tr>
+					  <tr>
+						<td>Double</td>
+						<td>$50</td>
+						<td>$60</td>
+						<td>$90</td>
+						<td>$120</td>
+					  </tr>
+					  <tr>
+						<td>Family</td>
+						<td>$80</td>
+						<td>$90</td>
+						<td>$120</td>
+						<td>$150</td>
+					  </tr>
+					</tbody>
+				  </table></br>	
+				
+			</div>
+			
+			<div id="col_2_2" class="col-md-12">
+				<h5>Deluxe Rooms</h5>
+					 <table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Rooms</th>
+							<th>P/Night</th>
+							<th>With B/F</th>
+							<th>H/Board</th>
+							<th>F/Board</th>
+						</tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td>Single</td>
+						<td>$50</td>
+						<td>$60</td>
+						<td>$80</td>
+						<td>$110</td>
+					  </tr>
+					  <tr>
+						<td>Double</td>
+						<td>$70</td>
+						<td>$90</td>
+						<td>$120</td>
+						<td>$140</td>
+					  </tr>
+					  <tr>
+						<td>Family</td>
+						<td>$100</td>
+						<td>$110</td>
+						<td>$140</td>
+						<td>$170</td>
+					  </tr>
+					</tbody>
+				  </table></br>	
+			</div>
+			
+			
+			<div id="col_2_3" class="col-md-12">
+				<h5>Presidential Rooms</h5>
+					 <table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Rooms</th>
+							<th>P/Night</th>
+							<th>With B/F</th>
+							<th>H/Board</th>
+							<th>F/Board</th>
+						</tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td>Single</td>
+						<td>$70</td>
+						<td>$80</td>
+						<td>$100</td>
+						<td>$130</td>
+					  </tr>
+					  <tr>
+						<td>Double</td>
+						<td>$90</td>
+						<td>$110</td>
+						<td>$150</td>
+						<td>$190</td>
+					  </tr>
+					  <tr>
+						<td>Family</td>
+						<td>$120</td>
+						<td>$150</td>
+						<td>$190</td>
+						<td>$250</td>
+					  </tr>
+					</tbody>
+				  </table>	</br>
+				  <marquee>ABOVE PRICE RATES ARE ONLY VAILD FOR THE BOOKINGS THROUGH OUR WEBSITE</marquee>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer Section --> <!-- Styles in this section is used to overide the Bootstrap styles -->
+	
+	<div id="footer">
+		<div id="f_row1">
+			<h3><TT>QUICK LINKS</TT></h3>
+			<a class="links" href="index.html">Home</a><br>
+			<a class="links" href="facilities.html">Facilities</a><br>
+			<a class="links" href="accomandation.html">Accomandation</a><br>
+			<a class="links" href="reservation.html">Reservation</a><br>
+			<a class="links" href="offers.html">Offers</a><br>
+			<a class="links" href="contacts.html">Contact</a>
+			
+			<h3><TT>CONNNECT WITH US</TT></h3>
+				<a href="#"><img id="icon_1" src="images/facebook.png" /></a>
+				<a href="#"><img src="images/tripadvisor.png"/></a>
+				<a href="#"><img src="images/agoda.png"/></a>
+				<a href="#"><img src="images/booking.png"/></a>
+				<a href="#"><img src="images/youtube.png"/></a>
+			
+			
+		</div>
+		
+		<div id="f_row2">
+			<h3 style="padding-bottom: 3%;"><TT>OUR ADDRESS</TT></h3>
+			<p>(618) 586-2793 301 W Lamotte Street, Negombo, 11500</p>
+			
+			<h3 style="padding-bottom: 3%;"><TT>PHONE:</TT></h3>
+			<p>+94 35 2546598</br> +94 35 2786651</p>
+			
+			<h3 style="padding-bottom: 3%;"><TT>EMAIL:</TT></h3>
+			<p> carltonguest@gmail.com </br> carltoninfo@hotmail.com </br>carlton789@yahoo.com </p>
+		
+		</div>
+		
+		<div id="f_row3">
+			<h3><tt>SPECIAL OFFERS</TT></h3>
+			<div id="f_row3_1">
+				<h4>GOLF TOURS</h4>
+				<a href="offers.html">
+				<img src="images/offers/golf_3.jpg"/>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum been the industry's.......</p></a>
+			</div>
+			<hr>
+			<div id="f_row3_2">
+				<h4>MARINE ADVENTURES</h4>
+				<a href="offers.html">
+				<img src="images/offers/marine_1.jpg"/>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum been the industry's.......</p></a>
+			</div>
+		</div>
+
+		
+		<div id="f_row4">	
+			<h3><tt>TOUR PACKAGES</TT></h3>
+			<ul>
+			<label>Mini Tour</label>
+				<li>3 Nights / 4 Days Program</li></br>
+			<label>Amazing lanka</label>
+				<li>Nights / 7 Days Program</li></br>
+			<label>Wonder Of Lanka</label>
+				<li>7 Nights / 8 Days Program</li></br>
+			<label>Ancient Lanka</label>
+				<li>10 Nights / 11 Days Program</li>
+			</ul>
+			<a href="contacts.html"> Contact us for More details </a>
+		</div>
+	</div>
+	
+		<div id="rights">
+			<p><small>&copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved - Design By K.J.M.Perera</small></p>
+		</div>
+	</div>
+	
+
+	</body>
+</html>

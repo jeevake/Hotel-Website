@@ -1,0 +1,140 @@
+/*CSS Code For the Assignment 2*/
+
+
+/*---- ROW 1 ----*/
+
+#row_1{
+	position:relative;
+	width:100%;
+}
+
+#row_1 h2{
+	font-size:25px;
+	font-family:"Times New Roman";
+	font-weight:bold;
+	letter-Spacing:1px;
+	width:12%;
+	padding:1% 0 1% 5%;
+	color:#ffffff;
+	background-color:rgba(0, 0, 0, .4);
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-name: title;
+}
+
+@keyframes title {
+  0%   {
+	  opacity:0;
+	  padding:1% 0% 1% 1%;
+	  }
+  100% {
+	  opacity:1;
+	  padding:1% 0% 1% 5%;
+	}
+}
+
+/*---- ROW 2 ----*/
+
+#row_2{
+	float:left;
+	position:relative;
+	width:100%;
+	background-color:#213269;
+}
+
+#row_2_1{
+	float:left;
+	background-color:#667aba;
+	width:40%;
+	margin:2% 2% 0 8%;
+}
+
+#row_2_2{
+	float:left;
+	background-color:#667aba;
+	width:40%;
+	margin:2% 8% 0 2%;
+}
+
+#row_2_1 h3, #row_2_2 h3{
+	font-size:20pt;
+	padding:1% 0 1% 5%;
+	color:#000;
+	background-color:rgba(255, 255, 255, .7);
+}
+
+#heading_1{
+	margin:5% 55% 5% 0;
+}
+
+#heading_2{
+	margin:5% 70% 5% 0;
+}
+
+#heading_3{
+	margin:5% 35% 5% 0;
+}
+
+#heading_4{
+	margin:5% 35% 5% 0;
+}
+
+#heading_5{
+	margin:5% 20% 5% 0;
+}
+
+#heading_6{
+	margin:5% 55% 5% 0;
+}
+
+#heading_7{
+	margin:5% 62% 5% 0;
+}
+
+#heading_8{
+	margin:5% 82% 5% 0;
+}
+#row_2_1 img, #row_2_2 img{
+	width:90%;
+	padding:0 5% 0;
+}
+
+#row_2_1 p, #row_2_2 p{
+	padding:0 5% 5%;
+	text-align:justify;
+	color:#fff;
+}
+
+#row_2 button{
+	color:#0000ff;
+	font-style:italic;
+	text-decoration:underline;
+	font-weight:bold;
+	background-color:none;
+	font-size:11px;
+}
+
+
+
+/* ---- Small Screen ---- */
+@media only screen and (max-width: 768px) {
+	
+#row_1{
+	padding-top:10%;
+}
+
+#row_1 h2{
+	font-size:15px;
+	width:30%;
+}
+
+#row_2_1, #row_2_2{
+	width:96%;
+	margin:2% 8% 0 2%;
+}
+
+#row_2_1 h3, #row_2_2 h3{
+	font-size:12pt;
+}
+
+}

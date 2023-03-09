@@ -1,0 +1,322 @@
+/*CSS Code For the Assignment 2*/
+
+
+body{
+	background-image: url('../images/hotel_blur.jpg');
+	background-attachment:fixed;
+	margin:0;
+}
+
+#wrapper{
+	margin:0 0.5% 0.5%;
+	padding-top:5%;
+}
+
+#header{
+	background-color:#1d1f1d;
+	color:#ffffff;
+	text-align:right;
+	width:100%;
+	position:fixed;
+	z-index:1;
+	margin:0 0% 0;
+}
+
+#header img{
+	margin:1% 0 0 3%;
+	float:left;
+	width:7%;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-name: head_img;
+}
+
+@keyframes head_img {
+  0%   {
+	  opacity:0;
+	  margin:1% 0 0 1%;
+  }
+  100% {
+	  opacity:1;
+	  margin:1% 0 0 3%;}
+}
+
+#header a{
+	color:#ffffff;
+	text-decoration:none;
+	padding:2%;
+	font-weight:bold;
+	font-family: 'Crimson Text', serif;
+}
+	
+
+#header a:hover{
+	color:#000000;
+	background-color:rgba(255,255,255,0.7);
+	text-decoration:none;
+	padding:2%;
+	font-weight:bold;
+}
+
+#nav{
+	padding:2%;
+}
+
+/* ---- Footer ---- */
+	
+#footer{
+	position:relative;
+	float:left;
+	width:100%;
+	background-color:#050a1a;
+}
+
+#f_row1, #f_row2, #f_row3, #f_row4{
+	position:relative;
+	float:left;
+	width:20%;
+	background-color:#050a1a;
+	margin:0 4% 0 1%;
+	line-height: 110%;
+
+}
+
+/* ---- Footer - ROW 1 ---- */
+	
+#f_row1 h3{
+	margin:10% 0 0 20%;
+	color:#ffffff;
+	font-size:14pt;	
+	letter-spacing:3px;
+	padding-bottom: 5%;
+    font-weight: bold;
+}
+
+
+.links{
+	margin:0 0 0 20%;
+	color:#ffffff;
+	text-decoration:none;
+	font-family: 'Crimson Text', serif;
+	font-size: 14pt;
+    line-height: 150%;
+}
+
+.links:hover{
+	color:#ffff03;
+	text-decoration:underline;
+}
+
+#f_row1 img{
+	width:12%;
+	margin:0 1% 5%;
+}
+
+#f_row1 #icon_1{
+    margin-left: 20%;
+}
+
+/* ---- Footer - ROW 2 ---- */
+
+#f_row2 h3{
+	margin:10% 0 0 20%;
+	color:#ffffff;
+	font-size:15pt;	
+	letter-spacing:3px;
+    font-weight: bold;
+}
+
+#f_row2 p{
+	padding:1% 0 0 20%;
+	color:#ffffff;
+	font-size: 14pt;	
+	line-height:150%;
+	font-family: 'Crimson Text', serif;
+}
+
+
+
+/* ---- Footer - ROW 3 ---- */
+
+#f_row3 h3{
+	margin:10% 0 0 20%;
+	color:#ffffff;
+	font-size:15pt;	
+	letter-spacing:3px;
+    font-weight: bold;
+	padding-bottom: 5%;
+}
+
+#f_row3 h4{
+	margin:0 0 5% 20%;
+	color:#ffffff;
+	font-size:13pt;	
+	font-family: 'Assistant', sans-serif;
+}
+
+#f_row3_1{
+	float:left;
+	margin:0 0 5% 0;
+}
+
+#f_row3_1 img{
+	float:left;
+	width: 30%;
+    margin: 0 0 0 20%;
+}
+
+#f_row3_1 p{
+	font-size: 13pt;
+	float:left;
+	color:#ffffff;
+	width: 45%;
+    margin: 0 0 0 5%;
+	text-align:justify;
+	font-family: 'Crimson Text', serif;
+}
+
+#f_row3 hr{
+	border:1px solid #fff; 
+	overflow: auto;
+	width:80%;
+	margin:0 0 5% 20%;
+	color:#ffffff;
+}
+
+#f_row3 p:hover{
+	color:#ffff03;
+}
+
+#f_row3_2{
+	float:left;
+	margin:0 0 5% 0;
+}
+
+
+#f_row3_2 img{
+	float:left;
+	width: 30%;
+    margin: 0 0 0 20%;
+}
+
+#f_row3_2 p{
+	font-size: 13pt;
+	float:left;
+	color:#ffffff;
+	width: 45%;
+    margin: 0 0 0 5%;
+	text-align:justify;
+	font-family: 'Crimson Text', serif;
+}
+
+/* ---- Footer - ROW 4 ---- */
+
+#f_row4 h3{
+	margin:10% 0 0 20%;
+	color:#ffffff;
+	font-size:15pt;	
+	letter-spacing:3px;
+    font-weight: bold;
+	padding-bottom: 5%;
+}
+
+#f_row4 label{
+	font-size:15pt;
+	color:#ffffff;
+	margin: 3% 0 0 8%;
+	font-family: 'Assistant', sans-serif;
+	font-weight:bold;
+}
+
+#f_row4 ul li{
+	color:#ffffff;
+	font-size:12pt;
+	margin: 3% 0 0 20%;
+	font-family: 'Crimson Text', serif;
+}
+
+#f_row4 a{
+	color:#ffffff;
+	font-size:14pt;
+	margin: 12% 0 0 18%;
+	text-decoration:none;
+	font-family: 'Crimson Text', serif;
+	font-weight:bold;
+}
+
+#f_row4 a:hover{
+	color:#ffff03;
+}
+
+/* ---- Rights---- */
+#rights{
+	background-color:#050a1a;
+	width:100%;
+	float:left;
+	padding-bottom: 1%;
+    margin-bottom: 1%;
+}
+
+#rights p{
+	text-align:center;
+	color:#ffffff;
+}
+
+/* ---- Small Screen ---- */
+@media only screen and (max-width: 768px) {
+
+#header{
+	text-align:left;
+}
+
+#header a{
+	font-size:10px;
+}
+
+#footer{
+	float:left;
+	width:100%;
+}
+
+#f_row1, #f_row2, #f_row3, #f_row4{
+	float:left;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+.links{
+ margin:0 0 0 12%;
+}
+
+#f_row4 ul{
+padding:0 0 0 1%;
+}
+
+#f_row1 img{
+	margin:0 0 1%;
+}
+
+#f_row1 #icon_1{
+    margin-left: 12%;
+}
+
+#f_row2 p{
+	padding: 1% 0 0 12%;
+}
+
+#f_row3 img{
+	margin:0 0 0 10%;
+}
+
+#f_row3 hr{
+	border:1px solid #fff; 
+	overflow: auto;
+	width:80%;
+	margin:0 0 5% 10%;
+	color:#ffffff;
+}
+
+#f_row4 h4{
+	margin: 12% 0 0 15%;
+}
